@@ -5,11 +5,10 @@ const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 
-let TOKEN, PREFIX;
+let PREFIX;
 try {
   const config = require("./config.json");
-  TOKEN = config.TOKEN;
-  PREFIX = config.PREFIX;
+  PREFIX = "+";
 } catch (error) {
   TOKEN = process.env.TOKEN;
   PREFIX = process.env.PREFIX;
@@ -17,7 +16,7 @@ try {
 
 const client = new Client({ disableMentions: "everyone" });
 
-client.login(TOKEN);
+client.login("NzIyNTE4MDk3NjU5MTY2ODIw.XukPag.z2Ig5WB3eQKS-eUNXmSn-71UYJA");
 client.commands = new Collection();
 client.prefix = PREFIX;
 client.queue = new Map();
